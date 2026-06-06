@@ -1,0 +1,35 @@
+{
+  "dependencies": {
+    "@neondatabase/serverless": "^1.1.0",
+    "@types/multer": "^2.1.0",
+    "axios": "^1.17.0",
+    "cloudinary": "^2.10.0",
+    "cookie-parser": "^1.4.7",
+    "datauri": "^4.1.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "multer": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.10",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.9.1",
+    "concurrently": "^10.0.3",
+    "nodemon": "^3.1.14",
+    "typescript": "^6.0.3"
+  },
+  "name": "admin-service",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "concurrently \"tsc -w\" \"nodemon dist/index.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

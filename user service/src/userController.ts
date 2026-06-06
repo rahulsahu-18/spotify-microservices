@@ -66,7 +66,9 @@ export const logout = async (req: Request, res: Response) => {};
 export const user = TryCatch(async (req: AuthRequest, res: Response) => {
   const userId = req.userId;
 
-  const user = await User.findById(userId).select("-password");
+  const user = await User.findById(userId)
+  .select("_id name email role playlist")
+  .lean();
   
-  res.status(200).json({user});
+  res.status(200).json(user);
 });
